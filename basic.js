@@ -40,3 +40,22 @@ function count_function() {
         return start;
     }
 }
+
+function countdown() {
+    var seconds = document.getElementById("seconds").value;
+
+    function tick() {
+        seconds -= 1;
+        document.getElementById("timer").innerHTML = seconds;
+        setTimeout(tick, 1000);
+    if (seconds == -1) {
+        alert("Time's up!")
+    }
+    }
+    tick()
+}
+
+var d = new Date()
+var time = d.getHours()
+console.log(time>12==time<0)
+
